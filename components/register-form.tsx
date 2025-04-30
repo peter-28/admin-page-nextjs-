@@ -15,13 +15,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-
-const formSchema = z.object({
-  name: z.string().min(2).max(50),
-  username: z.string().min(2).max(50),
-  email: z.string().email(),
-  password: z.string().min(5).max(50),
-});
+import { formSchema } from "@/lib/auth-schema";
 
 export function RegisterForm({
   className,
